@@ -1,0 +1,40 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Booking seat</title>
+</head>
+<body><h1>Booking seat</h1><P>
+<form action="bookseat.do" method="POST">
+
+<script type="text/javascript">
+
+var row=7;
+var col=10;
+var count=0;
+for (var i = 1; i <=row; i++) {
+	document.write("<table border='1'>");
+	document.write("<tr>");
+	for (var c=1; c <= col; c++) {
+		
+	    document.write("<td>");
+	    document.write("ที่นั่ง"+i+'-'+c);
+	    document.write("<br><input type='checkbox' name='seat"+count+"' value="+i+"-"+c+" >");
+	    document.write("</td>");
+	    count++;
+	    	
+	}
+	document.write("</tr>");
+	document.write("</table>");	
+}
+	document.write("<input type='hidden' name='count' value="+count+">");
+</script>
+<h2>Customer Info</h2><P>
+	Name <input type='text' name='name'></input><br>
+	Tel <input type='text' name='tel'></input><br>
+	E-mail <input type='text' name='email'></input><br>
+
+
+<input type="submit" value="ตกลง" />
+</form>
+</body>
+</html>
